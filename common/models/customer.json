@@ -7,22 +7,44 @@
       "type": "string"
     },
     "age": {
-      "type": "number"
+      "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "reviews": {
-      "type": "hasMany",
-      "model": "Review",
-      "foreignKey": "authorId"
+    "address": {
+      "type": "embedsOne",
+      "model": "Address",
+      "property": "billingAddress",
+      "options": {
+        "validate": true,
+        "forceId": false
+      }
+    },
+    "emails": {
+      "type": "embedsMany",
+      "model": "EmailAddress",
+      "property": "emailList",
+      "options": {
+        "validate": true,
+        "forceId": false
+      }
+    },
+    "accounts": {
+      "type": "referencesMany",
+      "model": "Account",
+      "property": "accountIds",
+      "options": {
+        "validate": true,
+        "forceId": false
+      }
     },
     "orders": {
       "type": "hasMany",
       "model": "Order",
-      "foreignKey": "customerId"
+      "foreignKey": ""
     }
   },
   "acls": [],
-  "methods": []
+  "methods": {}
 }
