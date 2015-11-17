@@ -1,12 +1,10 @@
 {
   "name": "loopback-example-relations",
-  "version": "1.0.0",
-  "description": "LoopBack model relations example",
+  "version": "0.0.0",
   "main": "server/server.js",
   "scripts": {
-    "pretest": "jshint .",
-    "start": "node .",
-    "test": "mocha -R spec test"
+    "test": "mocha -R spec test",
+    "pretest": "jshint ."
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -18,16 +16,11 @@
     "serve-favicon": "^2.0.1"
   },
   "optionalDependencies": {
-    "loopback-explorer": "^1.1.0"
+    "loopback-component-explorer": "^2.1.0"
   },
   "devDependencies": {
+    "supertest": "~0.13.0",
     "jshint": "^2.5.6",
-    "mocha": "^2.3.3",
-    "supertest": "^1.1.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/strongloop/loopback-example-relations.git"
-  },
-  "license": "MIT"
+    "mocha": "^1.20.1"
+  }
 }
