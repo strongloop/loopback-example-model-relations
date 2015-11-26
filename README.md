@@ -59,7 +59,7 @@ $ slc loopback:model Customer
       - String
       - Not Required
     - `age`
-      - String
+      - number
       - Not Required
 - Name: `Order`
   - Data source: `db (memory)`
@@ -212,7 +212,7 @@ $ slc loopback:relation
       - Custom foreign key: `customerId`
       - Require a through model: No
     - `Other Relations: `(please add them manually)
-    
+
       ```
       "address": {
         "type": "embedsOne",
@@ -242,7 +242,7 @@ $ slc loopback:relation
         }
       },
       ```
-  
+
 - `Book`(please add them manually)
   ```
   "people": {
@@ -253,7 +253,7 @@ $ slc loopback:relation
       }
   }
   ```
-  
+
 - `Link`(please add them manually)
    ```
    "linked": {
@@ -289,7 +289,7 @@ You should see various links. Each endpoint is defined as follows:
 - [/api/customers/4](http://localhost:3000/api/customers/4)
   - Look up a customer by ID
 - [/api/customers/youngFolks](http://localhost:3000/api/customers/youngFolks)
-  - List a predefined scope named *youngFolks* 
+  - List a predefined scope named *youngFolks*
 - [/api/customers/4/orders](http://localhost:3000/api/customers/4/orders)
   - List a given customer's orders
 - [/api/customers?filter[include]=orders](http://localhost:3000/api/customers?filter[include]=orders)
@@ -302,15 +302,15 @@ You should see various links. Each endpoint is defined as follows:
   - List first two customers including their orders
 - [/api/customers?filter[include]=accounts&filter[include]=orders](http://localhost:3000/api/customers?filter[include]=accounts&filter[include]=orders)
   - List all customers including their accounts and orders
-  
+
 #### embedsOne
 - [/api/customers/2/address](http://localhost:3000/api/customers/2/address)
   - List a given customer's address
-  
+
 #### embedsMany
 - [/api/customers/3/emails](http://localhost:3000/api/customers/3/emails)
   - List a given customer's email
-  
+
 #### referencesMany
 - [api/customers/1/accounts](http://localhost:3000/api/customers/1/accounts)
   - List all accounts owned by a given customer
@@ -318,7 +318,7 @@ You should see various links. Each endpoint is defined as follows:
   - Look up a given accounts of a given customer by foreign key
 - [/api/customers/1/accounts/count](http://localhost:3000/api/customers/1/accounts/count)
   - Count accounts number of a given customer
-  
+
 #### polymorphic embedsMany
 - [/api/Books/1/people](http://localhost:3000/api/Books/1/people)
   - List the linked people of a given book

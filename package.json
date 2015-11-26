@@ -1,5 +1,5 @@
 {
-  "name": "loopback-example-embedded-relations",
+  "name": "loopback-example-relations",
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
@@ -24,7 +24,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:strongloop/loopback-example-embedded-relations.git"
+    "url": "git@github.com:strongloop/loopback-example-relations.git"
   },
-  "description": "loopback-example-embedded-relations"
+  "license": "MIT",
+  "description": "loopback-example-relations"
 }
