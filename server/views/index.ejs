@@ -9,18 +9,39 @@
       <a href="/explorer">API Explorer</a>
     </p>
     <h2>API</h2>
+    <h4>hasMany</h4>
     <ul>
       <li><a href='/api/customers'>/api/customers</a>
-      <li><a href='/api/customers?filter[fields][name]=true'>/api/customers?filter[fields][name]=true</a>
+<!--       <li><a href='/api/customers?filter[fields][name]=true'>/api/customers?filter[fields][name]=true</a> -->
       <li><a href='/api/customers/<%= customer.id %>'>/api/customers/<%= customer.id %></a>
       <li><a href='/api/customers/youngFolks'>/api/customers/youngFolks</a>
-      <li><a href='/api/customers/<%= customer.id %>/reviews'>/api/customers/<%= customer.id %>/reviews</a>
       <li><a href='/api/customers/<%= customer.id %>/orders'>/api/customers/<%= customer.id %>/orders</a>
-      <li><a href='/api/customers?filter[include]=reviews'>/api/customers?filter[include]=reviews</a>
-      <li><a href='/api/customers?filter[include][reviews]=author'>/api/customers?filter[include][reviews]=author</a>
-      <li><a href='/api/customers?filter[include][reviews]=author&filter[where][age]=21'>/api/customers?filter[include][reviews]=author&filter[where][age]=21</a>
-      <li><a href='/api/customers?filter[include][reviews]=author&filter[limit]=2'>/api/customers?filter[include][reviews]=author&filter[limit]=2</a>
-      <li><a href='/api/customers?filter[include]=reviews&filter[include]=orders'>/api/customers?filter[include]=reviews&filter[include]=orders</a>
+      <li><a href='/api/customers?filter[include]=orders'>/api/customers?filter[include]=orders</a>
+      <li><a href='/api/customers?filter[include][orders]=customer'>/api/customers?filter[include][orders]=customer</a>
+      <li><a href='/api/customers?filter[include][orders]=customer&filter[where][age]=21'>/api/customers?filter[include][orders]=customer&filter[where][age]=21</a>
+      <li><a href='/api/customers?filter[include][orders]=customer&filter[limit]=2'>/api/customers?filter[include][orders]=customer&filter[limit]=2</a>
+      <li><a href='/api/customers?filter[include]=accounts&filter[include]=orders'>/api/customers?filter[include]=accounts&filter[include]=orders</a>
+    </ul>
+    <h4>embedsOne</h4>
+    <ul>
+      <li><a href='/api/customers/2/address'>/api/customers/2/address</a>
+    </ul>
+    <h4>embedsMany</h4>
+    <ul>
+      <li><a href='/api/customers/3/emails'>/api/customers/3/emails</a>
+    </ul>
+    <h4>referencesMany</h4>
+    <ul>
+      <li><a href='/api/customers/1/accounts'>/api/customers/1/accounts</a>
+      <li><a href='/api/customers/1/accounts/1'>/api/customers/1/accounts/1</a>
+      <li><a href='/api/customers/1/accounts/count'>/api/customers/1/accounts/count</a>
+    </ul>
+    <h4>polymorphic embedsMany</h4>
+    <ul>
+      <li><a href='/api/Books/1/people'>/api/Books/1/people</a>
+      <li><a href='/api/Books/1/people/1'>/api/Books/1/people/1</a>
+      <li><a href='/api/Books/1/people/2'>/api/Books/1/people/2</a>
     </ul>
   </body>
 </html>
+

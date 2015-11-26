@@ -2,12 +2,15 @@
   "name": "Order",
   "base": "PersistedModel",
   "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
   "properties": {
+    "date": {
+      "type": "date"
+    },
     "description": {
       "type": "string"
-    },
-    "total": {
-      "type": "number"
     }
   },
   "validations": [],
@@ -19,5 +22,5 @@
     }
   },
   "acls": [],
-  "methods": []
+  "methods": {}
 }
