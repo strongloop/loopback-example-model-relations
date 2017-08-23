@@ -19,7 +19,7 @@
     "loopback": "^3.0.0",
     "loopback-boot": "^2.12.1",
     "loopback-connector-rest": "^1.1.4",
-    "loopback-component-explorer": "^2.1.0",
+    "loopback-component-explorer": "^4.1.0",
     "serve-favicon": "^2.0.1",
     "serve-static": "^1.10.0",
     "strong-error-handler": "^1.1.0"
