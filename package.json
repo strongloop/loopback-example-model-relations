@@ -17,7 +17,7 @@
     "cors": "^2.8.1",
     "ejs": "^2.0.8",
     "loopback": "^3.0.0",
-    "loopback-boot": "^2.12.1",
+    "loopback-boot": "^3.0.0",
     "loopback-component-explorer": "^5.1.0",
     "loopback-connector-rest": "^3.0.0",
     "serve-favicon": "^2.4.4",
